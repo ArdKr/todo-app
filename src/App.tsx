@@ -1,14 +1,16 @@
 import React from "react";
 
 // Components
-import ListCard from "./components/ListCard";
+import Items from "./components/Items";
 
 const App = () => {
   return (
     <div className="container mx-auto py-8">
-      <h1 className="text-xl font-bold text-gray-700">Todo App</h1>
+      <div className="header w-full text-center pb-8">
+        <h1 className="text-xl mx-auto font-bold text-gray-700">Todo App</h1>
+      </div>
 
-      <ListCard />
+      <Items />
     </div>
   );
 };
