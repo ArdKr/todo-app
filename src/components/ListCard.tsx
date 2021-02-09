@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-import { ListType, TodoItemInterface, addNewItemToList } from "../storage";
-import { filterTodoItems } from "../storage/hooks";
+import { ListType, TodoItemInterface } from "../storage/types";
+import { filterTodoItems } from "../storage/filters";
 
 // Redux
 import { useSelector } from "react-redux";

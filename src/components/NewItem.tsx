@@ -5,10 +5,10 @@ import Input from "./Input";
 import Button from "./Button";
 
 // Storage functions
-import { addNewItemToList } from "../storage";
+import { addNewItemToList } from "../storage/update";
 
 //types
-import { TodoItemInterface } from "../storage";
+import { TodoItemInterface } from "../storage/types";
 
 interface NewItemProps {
   itemsList: TodoItemInterface[];

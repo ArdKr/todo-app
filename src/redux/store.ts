@@ -3,7 +3,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import listReducer from "./listsSlice";
 
 // types
-import { ListsObjectType } from "../storage";
+import { ListsObjectType } from "../storage/types";
 
 export const store = configureStore({
   reducer: {

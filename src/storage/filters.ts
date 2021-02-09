@@ -1,7 +1,5 @@
-import { getListsFromStorage, ListType } from "./index";
-
 // Types
-import { TodoItemInterface, ListsObjectType } from "./index";
+import { TodoItemInterface, ListType } from "./types";
 
 export const filterTodoItems = (listId: number, items: ListType[]) => {
   let todoItems: TodoItemInterface[] = [];

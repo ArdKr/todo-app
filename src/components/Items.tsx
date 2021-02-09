@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // List hooks and types
-import { ListType } from "../storage";
+import { ListType } from "../storage/types";
 import { StoreInterface } from "../redux/store";
 
 // Components

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // Todo item types
-import { TodoItemInterface } from "../storage";
+import { TodoItemInterface } from "../storage/types";
 
 import { removeItemFromList } from "../storage";
 
