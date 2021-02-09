@@ -8,12 +8,10 @@ import { useSelector } from "react-redux";
 import { StoreInterface } from "../redux/store";
 
 // Components
-import Input from "./Input";
-import Button from "./Button";
 import ListItem from "./ListItem";
+import NewItem from "./NewItem";
 
 const ListCard = ({ title, id, items }: ListType) => {
-  const [todoText, setTodoText] = useState("");
   const [itemsList, setItemsList] = useState<TodoItemInterface[]>([]);
 
   const itemsFromStore = useSelector(
@@ -24,36 +22,14 @@ const ListCard = ({ title, id, items }: ListType) => {
     setItemsList(filterTodoItems(id ?? 1, itemsFromStore));
   }, []);
 
-  const onButtonClick = () => {
-    if (todoText) {
-      const newItemId = addNewItemToList({ description: todoText }, id ?? 1);
-
-      // Update list if new item added
-      const newList = [...itemsList, { description: todoText, id: newItemId }];
-
-      setItemsList(newList);
-      setTodoText("");
-    }
-  };
-
-  const onInputUpdate = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setTodoText(e.target.value);
-  };
-
   return (
     <div className="bg-gray-100 mx-auto max-w-md rounded-md w-80">
       {/* Add new item to list div */}
-      <div className=" p-4 relative">
-        <Input
-          placeholder={"Add new item"}
-          itemText={todoText}
-          onInputUpdate={onInputUpdate}
-        />
-
-        <div className="plus-icon absolute top-5 right-5 bg-white">
-          <Button buttonText="+" onButtonClick={onButtonClick} />
-        </div>
-      </div>
+      <NewItem
+        itemsList={itemsList}
+        setItemsList={setItemsList}
+        listId={id ?? 1}
+      />
 
       {/* Items list */}
       {itemsList.length !== 0 && (

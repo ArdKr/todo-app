@@ -10,6 +10,10 @@ const App = () => {
         <h1 className="text-xl mx-auto font-bold text-gray-700">Todo App</h1>
       </div>
 
+      <div className="new-list">
+        <div className="button">+</div>
+      </div>
+
       <Items />
     </div>
   );
